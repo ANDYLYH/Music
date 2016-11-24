@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>小米音乐</title>
+		<style>
+			#seach_input{
+				position: fixed;
+				display: flex;
+				width: 100%;
+				top: 55px;
+				z-index: 10;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			#seach_input input{flex: 1;padding-left: 1em;}
+			#seach_input button{font-size: 2em;width:20vw;}
+		</style>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" href="lib/swiper/swiper.min.css" />
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+	    <link rel="stylesheet" href="css/index.css" />	
+	    
+	    <script type="text/javascript" src="lib/jquery/jquery.js" ></script>
+	    <script type="text/javascript" src="lib/zepto/dist/zepto.js" ></script>
+	    <script type="text/javascript" src="lib/zepto/src/touch.js" ></script>
+		<script type="text/javascript" src="lib/swiper/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/music.js" ></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<span class="iconfont icon-bofangliebiao"></span>
+			<span class="tag1 active">播放列表</span>
+			<span class="tag1">歌手写真</span>
+			<span class="tag1">专辑/歌词</span>
+			<span class="iconfont icon-sousuo"></span>
+		</div>
+		
+		<div class="nav">
+			<ul class="navlist">
+				<li styleid="3">欧美</li>
+				<li styleid="5" class="aim">内地</li>
+				<li styleid="6">港台</li>
+				<li styleid="16">韩国</li>
+				<li styleid="17">日本</li>
+				<li styleid="18">民谣</li>
+				<li styleid="19">摇滚</li>
+				<li styleid="23">销量</li>
+				<li styleid="26">热歌</li>
+			</ul>
+		</div>
+		<div  id="seach_input">
+			  <input type="text" class="song_seach" list="music_list">
+			  <button class="songBtn">搜索</button>
+		</div>
+		<!--内容-->
+		<div class="swiper-container" id="main_body">
+			    <div class="swiper-wrapper">
+			    	<!--播放列表-->
+			        <div class="swiper-slide" id="song">
+			        	<!--<datalist>
+			        		
+			        	</datalist>-->
+			        </div>
+			        
+			        <!--歌手写真-->
+			        <div class="swiper-slide" id="author">
+			        	<!--<div class="hgroup">
+			        	    <p>十年</p>
+			        	    <p>陈奕迅</p>
+			        	</div>
+			        	-->
+			        	<div id="singer_img">
+			        		<img src="img/g009.jpg" alt="" title="图片"/>
+			        	</div>
+			        	<div class="bofang_model">
+			        		<span class="iconfont icon-xiazai"></span>
+			        		<span class="iconfont icon-taoxin"></span>
+			        		<span class="iconfont icon-icon"></span>
+			        		<span class="iconfont icon-fenxiang"></span>
+			        		<span class="iconfont icon-shenglvehao"></span>
+			        	</div>
+			        </div>
+			        
+			        <div class="swiper-slide"></div>
+			    </div>
+			    <!--//专辑/歌词-->
+			    <div class="swiper-pagination"></div>
+	    </div>
+	    <!--底部-->
+	    <footer class="footer">
+	    	<div class="foot_left">
+	    		<img src="img/g009.jpg" />
+	    	</div>
+	    	<div class="foot_right">
+	    		<h2>陈奕迅</h2>
+	    		<p>最佳损友</p>
+	    		<div class="logo">
+	    			<!--上一首-->
+	    			<span class="iconfont icon-prev"></span>
+	    			<!--暂停/播放-->
+	    			<span class="iconfont icon-zan"></span>
+	    			<!--下一首-->
+	    			<span class="iconfont icon-next"></span>
+	    		</div>
+	    		<div class="logo1">
+	    			<progress max="100" value="0"></progress>
+	    			<div class="logo2">
+	    				<!--已播放时间-->
+	    				<time>00:00</time>
+	    				<!--总时间-->
+	    				<time>04:00</time>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </footer>
+	</body>
+</html>
